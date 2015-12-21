@@ -44,9 +44,6 @@ def lexStringSort(stringArray, lexOrder):
 	firstCharValue = lexValues[lexOrder[0]] - 1
 	numBuckets     = len(lexOrder) + 1 # Plus 1 to account for empty char "".
 	buckets        = [list() for i in range(0, numBuckets)]
-
-	# Start by sorting the string array by length of each string.
-	stringArray.sort(key=len)
 	
 	# Iterate over strings and assemble buckets with 
 	for stringIndex in reversed(range(0, maxStringLength)):
